@@ -33,6 +33,13 @@ public class calculadoraController {
     @FXML
     private void handleEquals() {
         double num2 = Double.parseDouble(display.getText());
+
+        if(operator.equals("/") && num2 == 0 || num1 ==0){
+            display.setText("ERRO");
+            startNewNumber = true;
+            return;
+        }
+
         double result = switch (operator) {
             case "+" -> num1 + num2;
             case "-" -> num1 - num2;

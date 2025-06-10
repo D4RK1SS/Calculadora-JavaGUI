@@ -3,6 +3,7 @@ package com.lokiss.calculadora;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import java.lang.Math;
 
 public class calculadoraController {
     @FXML
@@ -45,6 +46,8 @@ public class calculadoraController {
             case "-" -> num1 - num2;
             case "*" -> num1 * num2;
             case "/" -> num1 / num2;
+            case "^" -> Math.pow(num1, num2);
+            case "%" -> (num1 / 100) * num2;
             default -> num2;
         };
         display.setText(String.valueOf(result));

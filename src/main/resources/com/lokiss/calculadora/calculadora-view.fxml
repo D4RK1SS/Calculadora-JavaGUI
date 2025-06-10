@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox maxHeight="1.7976931348623157E308" prefHeight="361.0" prefWidth="287.0" spacing="10" style="-fx-background-color: #f0f0f0; -fx-padding: 20;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lokiss.calculadora.calculadoraController">
+<VBox maxHeight="1.7976931348623157E308" prefHeight="339.0" prefWidth="416.0" spacing="10" style="-fx-background-color: #f0f0f0; -fx-padding: 20;" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lokiss.calculadora.calculadoraController">
 
     <!-- Display da Calculadora -->
     <Label fx:id="display" alignment="CENTER_RIGHT" maxWidth="Infinity" style="-fx-background-color: white; -fx-border-color: #ccc; -fx-border-radius: 5; -fx-padding: 10 15;" text="0" VBox.vgrow="ALWAYS">
@@ -14,79 +18,92 @@
     </Label>
 
     <!-- Teclado -->
-    <GridPane alignment="CENTER" hgap="5" vgap="5" VBox.vgrow="ALWAYS">
+    <GridPane alignment="BASELINE_RIGHT" hgap="5" prefHeight="268.0" prefWidth="420.0" vgap="5" VBox.vgrow="ALWAYS">
         <!-- Linha 1 -->
-        <Button onAction="#handleDigit" styleClass="digit-button" text="7" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+       
+        <Button onAction="#handleDigit" styleClass="digit-button" text="7" GridPane.columnIndex="1" GridPane.rowIndex="0">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleDigit" styleClass="digit-button" text="8" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleDigit" styleClass="digit-button" text="8" GridPane.columnIndex="2" GridPane.rowIndex="0">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleDigit" styleClass="digit-button" text="9" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleDigit" styleClass="digit-button" text="9" GridPane.columnIndex="3" GridPane.rowIndex="0">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleOperator" styleClass="operator-button" text="/" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleOperator" styleClass="operator-button" text="/" GridPane.columnIndex="4" GridPane.rowIndex="0">
          <font>
             <Font size="30.0" />
          </font></Button>
 
         <!-- Linha 2 -->
-        <Button onAction="#handleDigit" styleClass="digit-button" text="4" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleDigit" styleClass="digit-button" text="4" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleDigit" styleClass="digit-button" text="5" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleDigit" styleClass="digit-button" text="5" GridPane.columnIndex="2" GridPane.rowIndex="1">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleDigit" styleClass="digit-button" text="6" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleDigit" styleClass="digit-button" text="6" GridPane.columnIndex="3" GridPane.rowIndex="1">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleOperator" styleClass="operator-button" text="*" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleOperator" styleClass="operator-button" text="*" GridPane.columnIndex="4" GridPane.rowIndex="1">
          <font>
             <Font size="30.0" />
          </font></Button>
 
         <!-- Linha 3 -->
-        <Button onAction="#handleDigit" styleClass="digit-button" text="1" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleDigit" styleClass="digit-button" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleDigit" styleClass="digit-button" text="2" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleDigit" styleClass="digit-button" text="2" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleDigit" styleClass="digit-button" text="3" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleDigit" styleClass="digit-button" text="3" GridPane.columnIndex="3" GridPane.rowIndex="2">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleOperator" styleClass="operator-button" text="-" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleOperator" styleClass="operator-button" text="-" GridPane.columnIndex="4" GridPane.rowIndex="2">
          <font>
             <Font size="30.0" />
          </font></Button>
 
         <!-- Linha 4 -->
-        <Button onAction="#handleDigit" styleClass="digit-button" text="0" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleDigit" styleClass="digit-button" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleClear" styleClass="clear-button" text="C" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleClear" styleClass="clear-button" text="C" GridPane.columnIndex="2" GridPane.rowIndex="3">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleEquals" styleClass="equals-button" text="=" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleEquals" styleClass="equals-button" text="=" GridPane.columnIndex="3" GridPane.rowIndex="3">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleOperator" styleClass="operator-button" text="+" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+        <Button onAction="#handleOperator" styleClass="operator-button" text="+" GridPane.columnIndex="4" GridPane.rowIndex="3">
          <font>
             <Font size="30.0" />
          </font></Button>
+      <Button layoutX="328.0" layoutY="10.0" onAction="#handleOperator" styleClass="operator-button" text="\%">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="BOTTOM" layoutX="328.0" layoutY="73.0" onAction="#handleOperator" styleClass="operator-button" text="^" GridPane.rowIndex="1">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+
       <columnConstraints>
+         <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
          <ColumnConstraints />
          <ColumnConstraints />
          <ColumnConstraints />

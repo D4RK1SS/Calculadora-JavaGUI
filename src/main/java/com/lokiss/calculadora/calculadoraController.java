@@ -53,6 +53,7 @@ public class calculadoraController {
             case "/" -> num1 / num2;
             case "^" -> Math.pow(num1, num2);
             case "%" -> (num1 / 100) * num2;
+            case "√" -> Math.sqrt(num1);
             default -> num2;
         };
         display.setText(String.valueOf(result));

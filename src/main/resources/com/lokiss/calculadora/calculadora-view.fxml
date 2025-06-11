@@ -22,19 +22,19 @@
     <!-- Teclado -->
     <GridPane alignment="BASELINE_RIGHT" hgap="5" prefHeight="268.0" prefWidth="420.0" vgap="5">
 
-        <Button onAction="#handleDigit" styleClass="digit-button" text="7" GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <Button onAction="#handleDigit" styleClass="digit-button" text="7" GridPane.columnIndex="1">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleDigit" styleClass="digit-button" text="8" GridPane.columnIndex="2" GridPane.rowIndex="0">
+        <Button onAction="#handleDigit" styleClass="digit-button" text="8" GridPane.columnIndex="2">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleDigit" styleClass="digit-button" text="9" GridPane.columnIndex="3" GridPane.rowIndex="0">
+        <Button onAction="#handleDigit" styleClass="digit-button" text="9" GridPane.columnIndex="3">
          <font>
             <Font size="30.0" />
          </font></Button>
-        <Button onAction="#handleOperator" styleClass="operator-button" text="/" GridPane.columnIndex="4" GridPane.rowIndex="0">
+        <Button onAction="#handleOperator" styleClass="operator-button" text="/" GridPane.columnIndex="4">
          <font>
             <Font size="30.0" />
          </font></Button>
@@ -94,7 +94,12 @@
             <Font size="30.0" />
          </font>
       </Button>
-      <Button contentDisplay="BOTTOM" layoutX="328.0" layoutY="73.0" onAction="#handleOperator" styleClass="operator-button" text="^" GridPane.rowIndex="1">
+      <Button contentDisplay="BOTTOM" layoutX="31.0" layoutY="73.0" onAction="#handleOperator" styleClass="operator-button" text="^" GridPane.rowIndex="1">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="BOTTOM" layoutX="31.0" layoutY="78.0" onAction="#handleOperator" styleClass="operator-button" text="√" GridPane.rowIndex="2">
          <font>
             <Font size="30.0" />
          </font>
@@ -106,8 +111,13 @@
          <ColumnConstraints />
          <ColumnConstraints />
          <ColumnConstraints />
+         <ColumnConstraints />
       </columnConstraints>
       <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
          <RowConstraints />
          <RowConstraints />
          <RowConstraints />

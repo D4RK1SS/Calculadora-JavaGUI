@@ -11,11 +11,16 @@ public class calculadoraController {
 
     private double num1 = 0;
     private String operator = "";
+    //variavel para checar se é o primeiro numero a ser digitado
     private boolean startNewNumber = true;
+
+//    codigo basico que pega o texto dentro do botão
+//    e adicioan ele da forma certa no display
 
     @FXML
     private void handleDigit(javafx.event.ActionEvent event) {
         String digit = ((Button) event.getSource()).getText();
+        //caso seja o primeiro numero imprime no display e retorna a variavel como false
         if (startNewNumber) {
             display.setText(digit);
             startNewNumber = false;
